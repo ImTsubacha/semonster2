@@ -14,6 +14,6 @@ public class Monster {
   // 3. テスト表示用
   @Override
   public String toString() {
-    return this.name + " (レア度: " + this.rarity + ")";
+    return this.name + ":レア度[" + this.rarity + "]";
   }
 }
