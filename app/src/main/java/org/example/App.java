@@ -14,6 +14,9 @@ public class App {
 
     // ちゃんと作れたか画面に出力して確認する
     System.out.println(myMonster.toString());
+    
+    myMonster.summonMonster(4);
+    System.out.println(myMonster.toString());
   }
 
 }

@@ -16,4 +16,28 @@ public class Monster {
   public String toString() {
     return this.name + ":レア度[" + this.rarity + "]";
   }
+
+  public void summonMonster(int rarity) {
+    this.rarity = rarity;
+
+    switch (rarity){
+      case 0:
+        this.name = "スライム";
+        break;
+      case 1:
+        this.name = "ゴブリン";
+        break;
+      case 2:
+        this.name = "オーク";
+        break;
+      case 3:
+        this.name = "ワイバーン";
+        break;
+      case 4:
+        this.name = "ドラゴン";
+        break;
+      default:
+        throw new IllegalArgumentException("Invalid rarity: " + rarity);
+    }
+  }
 }
