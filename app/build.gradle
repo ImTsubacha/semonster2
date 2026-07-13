@@ -42,3 +42,13 @@ application {
     // Define the main class for the application.
     mainClass = 'org.example.App'
 }
+
+tasks.withType(JavaCompile){
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(JavaExec){
+    jvmArgs += "-Dfile.encoding=UTF-8"
+    systemProperty "sun.stdout.encoding","UTF-8"
+    systemProperty "sun.stderr.encoding","UTF-8"
+}
