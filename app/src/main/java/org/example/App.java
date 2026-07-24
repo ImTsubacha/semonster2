@@ -3,6 +3,8 @@
  */
 package org.example;
 
+import java.util.LinkedList;
+
 public class App {
   public String getGreeting() {
     return "こんにちは SEMonster";
@@ -14,9 +16,24 @@ public class App {
 
     // ちゃんと作れたか画面に出力して確認する
     System.out.println(myMonster.toString());
-    
+
     myMonster.summonMonster(4);
     System.out.println(myMonster.toString());
+
+    // Playerクラスで使用する固定値をLinkedListに格納
+    // Randomは使用しない
+    LinkedList<Integer> monsterNumbers = new LinkedList<>();
+
+    monsterNumbers.add(0);
+    monsterNumbers.add(4);
+    monsterNumbers.add(0);
+    monsterNumbers.add(3);
+    monsterNumbers.add(1);
+
+    // Playerクラスの動作確認
+    Player player = new Player("user", monsterNumbers);
+
+    System.out.println(player.toString());
   }
 
 }
